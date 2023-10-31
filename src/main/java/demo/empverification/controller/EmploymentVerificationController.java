@@ -7,7 +7,8 @@ import io.swagger.v3.oas.annotations.info.License;
 import io.swagger.v3.oas.annotations.servers.Server;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-
+import demo.empverification.models.domain.Employee;
+import demo.empverification.service.api.EmployeeService;
 
 @RestController
 @RequestMapping("/empms")
@@ -25,7 +26,18 @@ import org.springframework.web.bind.annotation.*;
 public class EmploymentVerificationController
 {
 
-    @GetMapping(value = "/")
+    private final EmployeeService employeeService;
+
+   /* @GetMapping(value = "/")
     public String findEmployee(@RequestParam( "Id" ) String stationId)
-    { return "result"; }
+    { return "result"; }*/
+
+
+    @GetMapping(value = "/employee/{employeeId}")
+    public Employee findEmployeeById(@PathVariable("employeeId") Long employeeId
+    )
+    {
+        return employeeService.findEmployee(employeeId);
+    }
+
 }

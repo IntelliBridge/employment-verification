@@ -21,13 +21,22 @@ public class EmployeeServiceImpl implements EmployeeService
 
     private final EmployeeRepository employeeRepository;
 
-    @Override
+   /* @Override
     public String createEmployee(Employee employee)
     {
 
          employee  = employeeRepository.saveAndFlush(employee);
         return "success";
+    }*/
+
+    @Override
+    public Employee findEmployee(Long empId)
+    {
+
+        Employee employee  = employeeRepository.findOneByEmpId(empId);
+        return employee;
     }
+
 
 
 }

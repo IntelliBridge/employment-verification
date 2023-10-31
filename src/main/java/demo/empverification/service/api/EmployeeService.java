@@ -5,7 +5,8 @@ import demo.empverification.models.domain.Employee;
 
 public interface EmployeeService
 {
-    public String  createEmployee(Employee employee);
+    //public String  createEmployee(Employee employee);
 
+    public Employee  findEmployee(Long employeeId);
 
 }

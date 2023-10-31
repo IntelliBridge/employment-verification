@@ -20,6 +20,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 public class EmploymentVerificationApplication extends SpringBootServletInitializer
 {
 	public static void main(String[] args) {
-		SpringApplication.run(EmployeeVerificationApplication.class, args);
+		SpringApplication.run(EmploymentVerificationApplication.class, args);
 	}
 }

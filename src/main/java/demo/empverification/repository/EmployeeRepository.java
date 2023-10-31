@@ -17,5 +17,5 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer>,
         JpaSpecificationExecutor<Employee>
 {
 
-
+    public Employee findOneByEmpId(Long empId);
 }

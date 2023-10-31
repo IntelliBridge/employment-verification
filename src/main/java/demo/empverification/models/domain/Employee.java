@@ -23,8 +23,10 @@ public class Employee  implements Serializable
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = employeeId, columnDefinition = "serial", unique = true, nullable = false)
-    private String employeeId;
+    @Column(name = "employeeId", columnDefinition = "serial", unique = true, nullable = false)
+    private Long employeeId;
+
+
 
     @Column(name = "firstname", nullable = false, unique = true)
     private String employeeFirstName;
